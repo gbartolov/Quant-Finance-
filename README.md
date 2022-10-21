@@ -18,10 +18,12 @@ The brownian motion will be the main driver for estimating the return. It is a s
 A geometric Brownian motion (exponential Brownian motion) is a continuous-time stochastic process in which the logarithm of the randomly varying quantity follows a Brownian motion with drift.
 
 A stochastic process St is said to follow a GBM if it satisfies the following stochastic differential equation (SDE):
+
 dS(t) = muS(t)dt + sigmaS(t)dW(t),
 where W(t) is a Wiener process or Brownian motion, mu ('drift') and sigma ('volatility') are constants.
 
 Drift — is its constant directional movement.
+
 Volatility — represents market volatility that is multiplied with a random input, which in this case is a standard normal variable.
 
 In this notebook we try to intervene into assumption /a)/, and not to allow historic prices to be the inputs for the model i.e. drift and volatility will not be based on historical prices.
@@ -40,4 +42,4 @@ On Google, it can be found lots of definitions for the model so it will not be c
 
 Conclusion
 
-Finally, when we have all the outputs, we can plug them into M-C simulation for X projected days. On the last projected day, we can sort values from high to low and run statistics. The statistical results can show us what is the median of the series or the first and third quantiles. We can use these properties for projected ranges. For example, if Q1 = 100 and Q3 = 150, we can expect that for the next X projected days the prices should trade above Q1 and below Q3 75% of the time. That gives us confidence in our decisions when to buy or to sell, or we can use those levels to test for what weights should we get after optimization. In the notebook, we used median prices for the target prices for the next 252 days and then run the optimizations for the Sharpe ratio and for minimum volatilities.
+Finally, when we have all the outputs, we can plug them into M-C simulation for X projected days. On the last projected day, we can sort values from high to low and run statistics. The statistical results can show us what is the median of the series or the first and third quantiles. We can use these properties for projected ranges. For example, if Q1 = 100 and Q3 = 150, we can expect that for the next X projected days the prices should trade above Q1 and below Q3 75% of the time (or in that range Q1-Q3 50% of the time). That gives us confidence in our decisions when to buy or to sell, or we can use those levels to test for what weights should we get after optimization. In the notebook, we used median prices for the target prices for the next 252 days and then run the optimizations for the Sharpe ratio and for minimum volatilities.
