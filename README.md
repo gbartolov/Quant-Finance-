@@ -23,4 +23,15 @@ where W(t) is a Wiener process or Brownian motion, mu ('drift') and sigma ('vola
 Drift — is its constant directional movement.
 Volatility — represents market volatility that is multiplied with a random input, which in this case is standard normal variable.
 
-In this notebook we try to intervene into assumption /a)/, and not to allow plain historic prices to be the inputs for the model i.e. drift and volatility will not be based on historical prices.
+In this notebook we try to intervene into assumption /a)/, and not to allow historic prices to be the inputs for the model i.e. drift and volatility will not be based on historical prices.
+
+Knowing that we need to replace inputs for drift (expected return) and volatility. We will done that by usig two different models.
+For calculating expected returns it will be useed Black-Litterman model and for volatility it will be done by GARCH(1,1) model.
+To reiterate; exected return as an input for M-C simulatio will be done by Black Litterman and for expected volatility it will be used GARCH(1,1)
+
+Black-Litterman
+Key information on the Black-Litterman model is provided in the notebook, but it needs to be explained here what is the logic behind it. 
+The award-winning model on portfolio construction (Markowitz MPT) starts with the idea of expected returns and covariances - first calculated and then optimize for weights. The logic of B-L is the opposite, it tries to reverse engineer the process since expected returns (ERs) are impossible to know and what usually happens is that calculated weights are not the most optimal. So, two GSs practitioners decided to go another way around, assuming that we already know what are the weights. Since we use publicly traded instruments for calculation they assumed that the market cap of stocks/ETFs are the optimal weights. For example, if we want to pair AAPL and GOOG for optimization then optimal weights are their market caps. From this ground, they build implied expected returns, which we did in the notebook with SPY and TLT. However, markets are not usually correct (in equilibrium) and prices can deviate from fundamentals. That is why they decided to incorporate personal (subjective) views into the calculation. Finalyl     
+
+
+
