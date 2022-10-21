@@ -10,12 +10,13 @@ This type of modeling forecasts the probability of various outcomes under differ
 Stochastic modeling is inherently random, and the uncertain factors are built into the model.
 
 The Monte Carlo simulation is one example of a stochastic model; it can simulate how prices may perform based on the probability distributions.
-Base case assumptions for performing M-C simulation are following: a) using some historical inputs (e.g., daily prices of last two years), b) normal (Gaussian) distribution 
+Base case assumptions for performing M-C simulation are following: a) using some historical inputs (e.g., daily prices of last two years), b) normal (Gaussian) distribution.
 
 Brownian motion will be the main driver for estimating the return. It is a stochastic process used for modeling random behavior over time. 
 A geometric Brownian motion (exponential Brownian motion) is a continuous-time stochastic process in which the logarithm of the randomly varying quantity follows a Brownian motion with drift.
 
 A stochastic process St is said to follow a GBM if it satisfies the following stochastic differential equation (SDE):
+
 dS(t) = muS(t)dt + sigmaS(t)dW(t),
 where W(t) is a Wiener process or Brownian motion, mu ('drift') and sigma ('volatility') are constants.
 
