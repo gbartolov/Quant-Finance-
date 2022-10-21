@@ -3,6 +3,7 @@
 In this repository, we will try to go through different portfolio construction techniques, performance analysis, and backtesting.
 
 FILE: Portfolio Construction
+
 The notebook file consists of two main ideas: 1) Projection of Expected Returns(and Covariances) and 2) Constructing portfolios using ER and COV. The key concept of the file is based on stochastic modeling. Stochastic modeling is a form of financial model that is used to help make investment decisions.
 This type of modeling forecasts the probability of various outcomes under different conditions, using random variables. Stochastic modeling is inherently random, and uncertain factors are built into the model.
 
