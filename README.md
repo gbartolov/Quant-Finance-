@@ -37,3 +37,14 @@ On Google, it can be found lots of definitions for the model so it will not be c
 
 Finally, when we have all the outputs, we can plug them into M-C simulation for X projected days. On the last projected day, we can sort values from high to low and run statistics. The statistical results can show us what is the median of the series or the first and third quantiles. We can use these properties for projected ranges. For example, if Q1 = 100 and Q3 = 150, we can expect that on the last projected day prices should trade above Q1 and below Q3 75% of the time (or in that range Q1-Q3 50% of the time). That gives us confidence in our decisions when to buy or to sell, or we can use those levels to test for what weights should we get after optimization. In the notebook, we used median prices for the target prices for the next 252 days and then run the optimizations for the Sharpe ratio and for minimum volatilities.
 
+
+## FILE: Portfolio Performance
+
+The notebook file presents a couple of different metrics: Annualized Returns and Volatility, Sharpe ratio, Drawdown/Max DD, Skewness, Kurtosis, and Vars.
+
+First, it displays four portfolios: Max Sharpe Ratio (MSR), Global Minimum Variance (GBM), Equally Weighted (EW), and the Benchmark (traditional) portfolio.
+
+Based on the logic from /FILE: Portfolio Construction/ we created MSR and GBM portfolios (weights), while the other two are self-explainable. The projection started on 10/17/2021 for the next 252 days.  
+
+Finally, in the end, it is presented the Summary Statistics and there it can be seen the best comparison between the portfolios.
+
