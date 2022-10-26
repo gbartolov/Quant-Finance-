@@ -46,5 +46,5 @@ First, it displays four portfolios: Max Sharpe Ratio (MSR), Global Minimum Varia
 
 Based on the logic from /FILE: Portfolio Construction/ we created MSR and GBM portfolios (weights), while the other two are self-explainable. The projection started on 10/17/2021 for the next 252 days.  
 
-Finally, in the end, it is presented the Summary Statistics and there it can be seen the best comparison between the portfolios.
+Finally, it is presented the Summary Statistics and there it can be seen the best comparison between the portfolios.
 
